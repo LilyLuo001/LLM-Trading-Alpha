@@ -6,10 +6,10 @@
 Can LLM Trading Strategies Generate Alpha Beyond Traditional Factor Models?  
 
 ## Hypotheses  
-1. **H1:** AI-driven trading strategies generate **alpha beyond traditional factors**.  
-2. **H2:** AI outperforms human fund managers in **risk-adjusted returns**.  
-3. **H3:** AI-driven trading **improves market efficiency** by reducing mispricing.  
-4. **H4:** AI trading alpha **declines over time** as markets adapt.  
+1. **a:** AI-driven trading strategies generate **alpha beyond traditional factors**.  
+2. **b:** AI outperforms human fund managers in **risk-adjusted returns**.  
+3. **c:** AI-driven trading **improves market efficiency** by reducing mispricing.  
+4. **d:** AI trading alpha **declines over time** as markets adapt.  
 
 ## Data Sources  
 - **Stock Returns & Prices**: Yahoo Finance API  
