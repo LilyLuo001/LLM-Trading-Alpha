@@ -1,0 +1,31 @@
+import yfinance as yf
+import pandas as pd
+import numpy as np
+import os
+
+def download_stock_data(tickers, start_date="2010-01-01", 
+end_date="2024-01-01", save_path="data/stock_returns.csv"):
+    """Downloads stock price data, calculates log returns, and saves to 
+CSV."""
+
+    # Ensure the data folder exists
+    if not os.path.exists("data"):
+        os.makedirs("data")
+
+    try:
+        print("Downloading stock data...")
+        data = yf.download(tickers, start=start_date, end=end_date)
+        
+        if data.empty:
+            print("❌ Error: No data retrieved. Check tickers or date 
+range.")
+            return
+        
+        # Compute log returns
+        returns = data["Adj Close"].pct_change().apply(lambda x: np.log(1 
++ x))
+
+        # Save dataset
+        returns.to_csv(save_path)
+nano scripts/data_collection.py
+
